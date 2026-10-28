@@ -218,3 +218,8 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Course: never commit datasets or local editor settings
+data/
+*.csv
+.vscode/
