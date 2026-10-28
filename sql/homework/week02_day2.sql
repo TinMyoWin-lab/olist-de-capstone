@@ -1,3 +1,5 @@
+-- Week 2 · Day 2 homework — joins and row multiplication
+
 -- Q1: Revenue (SUM of price) by customer_state for delivered orders. Top 10 states.
 SELECT
     c.customer_state,
@@ -92,6 +94,3 @@ JOIN (
     ON p.order_id = i.order_id
 GROUP BY p.order_id, i.item_total
 HAVING ABS(SUM(p.payment_value) - i.item_total) > 1.00;
-
-
-
