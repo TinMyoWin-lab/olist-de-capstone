@@ -1,3 +1,5 @@
+-- Week 2 · Day 1 homework — core querying (SELECT, GROUP BY, HAVING)
+
 -- Q1: How many customers are there in each state? Show the top 5 states.
 select customer_state,count(*) as customers
 from customers
@@ -31,9 +33,8 @@ having count(*) > 50
 order by seller_state ;
 
 -- Q6.Average price and freight per order item, rounded to 2 decimals
+-- TODO: grouping by order_item_id gives one average per item position; the question wants one overall average.
 select order_item_id,Round(avg(price),2) as average_price,Round(avg(freight_value),2) as average_freight
 from order_items
 group by order_item_id 
 order by order_item_id ;
-
-    
